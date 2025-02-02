@@ -3,19 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react"; // Added X icon for closing the menu
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Update with your business links
   const navItems = [
-    { href: "/blog", label: "Blog" },
-    { href: "/docs", label: "Documentation" },
-    { href: "/features", label: "Features" },
-    { href: "/pricing", label: "Pricing" },
-    { href: "/tutorials", label: "Tutorials" },
-    { href: "/community", label: "Community" },
-    { href: "/about", label: "About" },
+    { href: "/features", label: "Services" },
+    { href: "/community", label: "Solutions" },
+    { href: "/about", label: "About Us" },
+    { href: "/contact", label: "Contact" },
+    { href: "/careers", label: "Careers" }, // Optional section for hiring
+    { href: "/blog", label: "Blog" }, // Optional blog section
   ];
 
   // Inline Button component
@@ -59,7 +59,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center px-4">
         <Link href="/" className="flex items-center space-x-2">
           <div className="h-6 w-6 bg-primary rounded-sm" />
-          <span className="font-bold text-foreground">Proda</span>
+          <span className="font-bold text-foreground">BusinessSolution</span> {/* Updated company name */}
         </Link>
         <div className="hidden md:flex items-center space-x-6 ml-6">
           {navItems.map((item) => (
@@ -74,22 +74,13 @@ export default function Navbar() {
         </div>
         <div className="ml-auto flex items-center space-x-4">
           <ThemeToggle />
-          <Button variant="ghost" asChild className="hidden md:inline-flex">
-            <Link href="/login">Login</Link>
-          </Button>
-          <Button asChild className="hidden md:inline-flex">
-            <Link href="/login">Get started</Link>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Menu className="h-5 w-5" />
+          {/* Removed login-related buttons */}
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </div>
+
       {isMenuOpen && (
         <div className="md:hidden border-t border-border">
           <div className="container py-4 space-y-2">
@@ -103,16 +94,7 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/login"
-              className="block text-sm font-medium transition-colors hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Login
-            </Link>
-            <Button asChild className="w-full" onClick={() => setIsMenuOpen(false)}>
-              <Link href="/login">Get started</Link>
-            </Button>
+            {/* Removed Login/Get Started sections */}
           </div>
         </div>
       )}

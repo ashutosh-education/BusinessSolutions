@@ -4,11 +4,10 @@ import { Line, LineChart as RechartsLineChart, ResponsiveContainer, Tooltip, XAx
 import { useTheme } from 'next-themes'
 
 const data = [
-  { date: "Nov 1", Alqen: 50, Others: 48 },
-  { date: "Nov 7", Alqen: 45, Others: 42 },
-  { date: "Nov 14", Alqen: 47, Others: 55 },
-  { date: "Nov 21", Alqen: 48, Others: 52 },
-  { date: "Nov 30", Alqen: 65, Others: 48 },
+  { year: "2022", BusinessSolution: 30, Industry: 25 },
+  { year: "2023", BusinessSolution: 50, Industry: 40 },
+  { year: "2024", BusinessSolution: 75, Industry: 60 },
+  { year: "2025", BusinessSolution: 100, Industry: 85 },
 ]
 
 export function LineChart() {
@@ -19,7 +18,7 @@ export function LineChart() {
     <ResponsiveContainer width="100%" height="100%">
       <RechartsLineChart data={data}>
         <XAxis 
-          dataKey="date" 
+          dataKey="year" 
           stroke={isDark ? "#888888" : "#333333"} 
           fontSize={12} 
           tickLine={false} 
@@ -39,10 +38,9 @@ export function LineChart() {
             color: isDark ? 'hsl(var(--foreground))' : 'hsl(var(--card-foreground))'
           }} 
         />
-        <Line type="monotone" dataKey="Alqen" stroke="hsl(var(--primary))" strokeWidth={2} />
-        <Line type="monotone" dataKey="Others" stroke={isDark ? "#888888" : "#333333"} strokeWidth={2} strokeDasharray="5 5" />
+        <Line type="monotone" dataKey="BusinessSolution" stroke="hsl(var(--primary))" strokeWidth={2} />
+        <Line type="monotone" dataKey="Industry" stroke={isDark ? "#888888" : "#333333"} strokeWidth={2} strokeDasharray="5 5" />
       </RechartsLineChart>
     </ResponsiveContainer>
   )
 }
-

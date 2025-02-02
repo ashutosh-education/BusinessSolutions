@@ -1,52 +1,92 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, LinkIcon, MessageSquare, Code2 } from "lucide-react";
+import { Users, LinkIcon, MessageSquare, Code2, Briefcase, Lightbulb, ClipboardCheck, BookOpen, Globe, Settings } from "lucide-react";
 
 const features = [
   {
-    title: "Invite your team",
-    description:
-      "Proda allows multiple code edits, invite every member of your team and work directly on the code canvas.",
+    title: "Comprehensive Internship Programs",
+    description: "Hands-on training in IT, Sales, Machine Learning, HR, Soft Skills, and more.",
+    icon: Briefcase,
+  },
+  {
+    title: "Consulting Services",
+    description: "Expert guidance for businesses in strategy, HR, and technology.",
+    icon: Lightbulb,
+  },
+  {
+    title: "Soft Skills & Leadership Training",
+    description: "Improve communication, negotiation, and leadership skills.",
+    icon: ClipboardCheck,
+  },
+  {
+    title: "Tech & AI Solutions",
+    description: "Cutting-edge Machine Learning and AI solutions for businesses.",
+    icon: Code2,
+  },
+  {
+    title: "Resume Building & Career Guidance",
+    description: "Get assistance in crafting impactful resumes and career planning.",
+    icon: BookOpen,
+  },
+  {
+    title: "Project-Based Learning",
+    description: "Engage in real-world projects to gain hands-on experience.",
     icon: Users,
   },
   {
-    title: "Share project link",
-    description: "Share your dart project as links, control access and conquer git clone.",
+    title: "Business Development Support",
+    description: "Help in sales strategies, marketing, and professional networking.",
     icon: LinkIcon,
   },
   {
-    title: "Live feedbacks",
-    description: "Receive live feedbacks, wave goodbye to slack notifications and stay productive.",
+    title: "Certification Programs",
+    description: "Recognized certifications to boost your credibility and career prospects.",
     icon: MessageSquare,
   },
   {
-    title: "Advanced intellisense",
-    description:
-      "Work 10X faster with our advanced intellisense, code auto-completer, AI debugging and lots more.",
-    icon: Code2,
+    title: "Mentorship & Networking",
+    description: "Connect with industry experts and expand your professional circle.",
+    icon: Globe,
   },
+  {
+    title: "Customizable Training Modules",
+    description: "Tailored training programs for businesses and individuals.",
+    icon: Settings,
+  },
+  {
+    title: "Entrepreneurship Guidance",
+    description: "Support for startups with business planning, funding strategies, and market analysis.",
+    icon: Briefcase,
+  },
+  {
+    title: "Corporate Training Solutions",
+    description: "Customized training programs for businesses to enhance employee skills and productivity.",
+    icon: ClipboardCheck,
+  },
+  
 ];
 
 export default function Features() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section>
+      <h2 className="text-2xl font-bold text-center mb-8">Our Services</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {features.map((feature, index) => (
         <motion.div
-          key={feature.title}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+        key={feature.title}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
         >
-          <div className="rounded-lg border bg-card/50 backdrop-blur-lg p-4 shadow-md">
-            <div className="flex items-center space-x-4 mb-3">
-              <feature.icon className="h-8 w-8 text-primary" />
-              <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
-            </div>
-            <p className="text-sm text-muted-foreground">{feature.description}</p>
-          </div>
+        <div className="rounded-xl border bg-card/50 backdrop-blur-lg p-6 shadow-md flex flex-col items-center text-center">
+          <feature.icon className="h-10 w-10 text-primary mb-3" />
+          <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
+          <p className="text-sm text-muted-foreground mt-2">{feature.description}</p>
+        </div>
         </motion.div>
       ))}
+      </div>
     </section>
   );
 }

@@ -56,7 +56,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
-          <p>&copy; 2023 Proda. All rights reserved.</p>
+          <p>&copy; 2025 Business Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>
