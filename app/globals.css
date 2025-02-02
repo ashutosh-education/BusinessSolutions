@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 50% 95%;
+    --foreground: 270 10% 10%;
+
+    --card: 270 50% 98%;
+    --card-foreground: 270 10% 10%;
+
+    --popover: 270 50% 98%;
+    --popover-foreground: 270 10% 10%;
+
+    --primary: 270 100% 50%;
+    --primary-foreground: 270 10% 98%;
+
+    --secondary: 270 30% 90%;
+    --secondary-foreground: 270 10% 10%;
+
+    --muted: 270 30% 90%;
+    --muted-foreground: 270 10% 40%;
+
+    --accent: 270 30% 90%;
+    --accent-foreground: 270 10% 10%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 270 10% 98%;
+
+    --border: 270 30% 80%;
+    --input: 270 30% 80%;
+    --ring: 270 100% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 270 50% 5%;
+    --foreground: 270 10% 98%;
+
+    --card: 270 50% 10%;
+    --card-foreground: 270 10% 98%;
+
+    --popover: 270 50% 10%;
+    --popover-foreground: 270 10% 98%;
+
+    --primary: 270 100% 60%;
+    --primary-foreground: 270 10% 98%;
+
+    --secondary: 270 30% 20%;
+    --secondary-foreground: 270 10% 98%;
+
+    --muted: 270 30% 20%;
+    --muted-foreground: 270 10% 60%;
+
+    --accent: 270 30% 20%;
+    --accent-foreground: 270 10% 98%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 270 10% 98%;
+
+    --border: 270 30% 20%;
+    --input: 270 30% 20%;
+    --ring: 270 100% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.dark .spotlight {
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+}
+
