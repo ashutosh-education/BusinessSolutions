@@ -58,8 +58,8 @@ export default function Navbar() {
     <nav className="border-b border-border bg-background/50 backdrop-blur-lg supports-[backdrop-filter]:bg-background/20 sticky top-0 z-50">
       <div className="container flex h-16 items-center px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="h-6 w-6 bg-primary rounded-sm" />
-          <span className="font-bold text-foreground">BusinessSolution</span> {/* Updated company name */}
+          <div className="h-6 w-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-sm shadow-lg transform transition-transform hover:scale-110" />
+          <span className="font-bold text-foreground text-lg tracking-wide transform transition-transform hover:scale-110">BusinessSolutions</span> {/* Updated company name */}
         </Link>
         <div className="hidden md:flex items-center space-x-6 ml-6">
           {navItems.map((item) => (

@@ -20,11 +20,6 @@ const features = [
     icon: ClipboardCheck,
   },
   {
-    title: "Tech & AI Solutions",
-    description: "Cutting-edge Machine Learning and AI solutions for businesses.",
-    icon: Code2,
-  },
-  {
     title: "Resume Building & Career Guidance",
     description: "Get assistance in crafting impactful resumes and career planning.",
     icon: BookOpen,
@@ -63,6 +58,11 @@ const features = [
     title: "Corporate Training Solutions",
     description: "Customized training programs for businesses to enhance employee skills and productivity.",
     icon: ClipboardCheck,
+  },
+  {
+    title: "Realtime Project Monitoring",
+    description: "Track your progress and get feedback on your projects in real-time.",
+    icon: Code2,
   },
   
 ];
