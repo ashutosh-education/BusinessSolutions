@@ -29,7 +29,7 @@ export default function Hero() {
         </h1>
         <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
           BusinessSolution provides expert guidance and training in IT, Sales, 
-          Machine Learning, Consulting, HR, Soft Skills, and more. Unlock 
+          , Consulting, HR, Soft Skills, and more. Unlock 
           opportunities with internships and services tailored to your growth.
         </p>
       </motion.div>
