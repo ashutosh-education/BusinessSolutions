@@ -9,15 +9,15 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Proda - Flutter Sandbox in Your Browser',
-  description: 'Proda is a free online sandbox environment for building & sharing Dart & Flutter applications.',
-  keywords: 'Flutter, Dart, sandbox, online IDE, web development',
-  authors: [{ name: 'Proda Team' }],
+  title: 'BusinessSolutions | A Future-Ready Platform',
+  description: 'BusinessSolutions is a platform that helps businesses automate their workflows, grow their business, and make their lives easier.',
+  keywords: 'business, automation, productivity, collaboration, workflow, efficiency, growth, internship, consulting, resume builder, business solutions, business automation, business growth, business consulting, business internship, business productivity, business workflow, business efficiency, business collaboration, business resume builder',
+  authors: [{ name: 'BusinessSolutions Team' }],
   openGraph: {
-    title: 'Proda - Flutter Sandbox in Your Browser',
-    description: 'Build and share Dart & Flutter applications online',
-    url: 'https://proda.dev',
-    siteName: 'Proda',
+    title: 'BusinessSolutions | A Future-Ready Platform',
+    description: 'Build and Grow Your Business with BusinessSolutions',
+    url: 'https://businesssolutions.vercel.app/',
+    siteName: 'BusinessSolutions',
     images: [
       { url: 'https://proda.dev/og-image.png', width: 1200, height: 630 },
     ],
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Proda - Flutter Sandbox in Your Browser',
-    description: 'Build and share Dart & Flutter applications online',
+    title: 'BusinessSolutions | A Future-Ready Platform',
+    description: ' Build and Grow Your Business with BusinessSolutions',
     images: ['https://proda.dev/twitter-image.png'],
   },
 }
