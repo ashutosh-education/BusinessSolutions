@@ -6,7 +6,7 @@ import { Users, LinkIcon, MessageSquare, Code2, Briefcase, Lightbulb, ClipboardC
 const features = [
   {
     title: "Comprehensive Internship Programs",
-    description: "Hands-on training in IT, Sales, Machine Learning, HR, Soft Skills, and more.",
+    description: "Hands-on training in IT, Sales, HR, Soft Skills, and more.",
     icon: Briefcase,
   },
   {
