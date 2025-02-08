@@ -6,29 +6,29 @@ import { useTheme } from "next-themes";
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "CEO, Tech Solutions",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
-    review: "This platform transformed our workflow! Our efficiency increased by 40%, and collaboration has never been easier. Highly recommended!",
+    name: "Vishal Singh",
+    designation: "Director- Brother's Academy",
+    avatar: "https://html-stuffs.vercel.app/images/vishal.png",
+    review: "This is a great platform for students to learn and grow. The UI is very user-friendly and the support team is very helpful.",
     rating: 5,
     linkedIn: "johndoe",
   },
   {
     id: 2,
-    name: "Sarah Smith",
-    designation: "Marketing Head, Creative Co.",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "Shankar Singh",
+    designation: "Director- Susheela Educare",
+    avatar: "https://html-stuffs.vercel.app/images/shankar.jpg",
     review:
-      "A game-changer for our business. The UI is sleek, and automation saves us hours every week!",
+      "BusinessSolutions has helped us streamline our business processes, and we are now able to focus on our core business.",
     rating: 4,
   },
   {
     id: 3,
-    name: "David Lee",
-    designation: "CTO, NextGen Apps",
-    avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Raunit Singh",
+    designation: "Co-founder-  Education Solutions Colleges",
+    avatar: "https://html-stuffs.vercel.app/images/raunit.jpg",
     review:
-      "Super intuitive and well-designed. Our team adapted quickly, and productivity has skyrocketed!",
+      "BusinessSolutions has helped most of the enterpreneurs to grow their business and make their life of work easier.",
     rating: 5,
   },
 ];
