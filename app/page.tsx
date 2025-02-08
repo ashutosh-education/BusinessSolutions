@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "@/components/hero"
 import Features from "@/components/features"
 import ContactForm from "@/components/contact-form"
+import Testimonials from "@/components/Testimonial";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           <div className="container mx-auto px-4 py-16 space-y-24">
             <Hero />
             <Features />
+            <Testimonials />
             <ContactForm />
           </div>
         </div>
