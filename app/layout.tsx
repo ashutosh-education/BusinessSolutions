@@ -8,31 +8,31 @@ import Footer from "@/components/footer"
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+const newLocal = {
   title: 'BusinessSolutions | A Future-Ready Platform',
   description: 'BusinessSolutions is a platform that helps businesses automate their workflows, grow their business, and make their lives easier.',
   keywords: 'business, automation, productivity, collaboration, workflow, efficiency, growth, internship, consulting, resume builder, business solutions',
   icons: {
     icon: [
       {
-        url: '/public/favicon.ico',
+        url: 'https://html-stuffs.vercel.app/images/android-chrome-512x512.png',
         sizes: '32x32',
         type: 'image/x-icon',
       },
       {
-        url: '/app/favicon-16x16.png',
+        url: 'https://html-stuffs.vercel.app/images/android-chrome-512x512.png',
         sizes: '16x16',
         type: 'image/png',
       },
       {
-        url: '/app/favicon-32x32.png',
+        url: 'https://html-stuffs.vercel.app/images/android-chrome-512x512.png',
         sizes: '32x32',
         type: 'image/png',
       }
     ],
     apple: [
       {
-        url: '/app/apple-touch-icon.png',
+        url: 'https://html-stuffs.vercel.app/images/android-chrome-512x512.png',
         sizes: '180x180',
         type: 'image/png',
       }
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: 'BusinessSolutions',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://html-stuffs.vercel.app/images/android-chrome-512x512.png',
         width: 1200,
         height: 630,
         alt: 'BusinessSolutions',
@@ -62,6 +62,7 @@ export const metadata: Metadata = {
     images: ['/twitter-image.png'],
   },
 }
+export const metadata: Metadata = newLocal
 
 export default function RootLayout({
   children,
