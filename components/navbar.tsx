@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Menu, X } from "lucide-react"; // Added X icon for closing the menu
+import { Menu, X, User } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
     { href: "/careers", label: "Careers" }, // Optional section for hiring
-    { href: "/blog", label: "Blog" }, // Optional blog section
+    { href: "/blog", label: "Blog" },
   ];
 
   // Inline Button component
@@ -78,7 +79,31 @@ export default function Navbar() {
         </div>
         <div className="ml-auto flex items-center space-x-4">
           <ThemeToggle />
-          {/* Removed login-related buttons */}
+          
+          {/* Profile Button */}
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link href="/profile">
+              <div className="relative w-9 h-9 rounded-full bg-purple-500/20 backdrop-blur-lg flex items-center justify-center overflow-hidden hover:bg-purple-500/30 transition-colors">
+                <motion.div
+                  animate={{
+                    rotate: [0, 360],
+                  }}
+                  transition={{
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/20 to-transparent"
+                />
+                {/* Replace with actual profile image if available */}
+                <User className="h-5 w-5 text-foreground z-10" />
+              </div>
+            </Link>
+          </motion.div>
+
           <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
