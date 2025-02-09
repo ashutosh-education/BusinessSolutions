@@ -44,7 +44,6 @@ export default function Home() {
               <div className="container mx-auto px-4 py-16 space-y-32">
                 <Hero />
                 <Features />
-                <ImageShowcase />
                 <Testimonials />
                 <ContactForm />
               </div>
@@ -55,34 +54,4 @@ export default function Home() {
     </AnimatePresence>
   );
 }
-
-const ImageShowcase = () => (
-  <section className="py-16">
-    <h2 className="text-3xl font-bold text-center mb-12">Our Work in Action</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {[1, 2, 3].map((i) => (
-        <motion.div
-          key={i}
-          whileHover={{ scale: 1.05 }}
-          className="relative rounded-2xl overflow-hidden border border-border bg-card"
-        >
-          <div className="aspect-video relative">
-            <img
-              src={`/work-${i}.jpg`}
-              alt={`Project ${i}`}
-              className="object-cover w-full h-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          </div>
-          <div className="p-4">
-            <h3 className="font-semibold mb-2">Project Title {i}</h3>
-            <p className="text-sm text-muted-foreground">
-              Brief description of the project and its impact on the client's business.
-            </p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </section>
-);
 

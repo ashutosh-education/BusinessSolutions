@@ -7,6 +7,7 @@ const features = [
   {
     title: "Comprehensive Internship Programs",
     description: "Hands-on training in IT, Sales, HR, Soft Skills, and more.",
+    link: "/fetures",
     icon: Briefcase,
   },
   {
