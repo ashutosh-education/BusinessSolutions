@@ -11,21 +11,21 @@ const features = [
     description: "Hands-on training in IT, Sales, HR, Soft Skills, and more.",
     link: "/features/internship",
     icon: Briefcase,
-    image: "/images/internship.jpg",
+    image: "https://img.freepik.com/free-photo/human-resource-hiring-recruiter-select-career-concept_53876-21141.jpg",
   },
   {
     title: "Consulting Services",
     description: "Expert guidance for businesses in strategy, HR, and technology.",
     link: "/features/consulting",
     icon: Lightbulb,
-    image: "/images/consulting.jpg",
+    image: "https://img.freepik.com/free-photo/business-people-shaking-hands-together_53876-30568.jpg",
   },
   {
     title: "Soft Skills & Leadership Training",
     description: "Improve communication, negotiation, and leadership skills.",
     link: "/features/soft-skills",
     icon: ClipboardCheck,
-    image: "/images/soft-skills.jpg",
+    image: "https://img.freepik.com/free-photo/medium-shot-people-working-together_23-2150170465.jpg",
   },
   {
     title: "Resume Building & Career Guidance",
@@ -107,12 +107,10 @@ export default function Features() {
             <Link href={feature.link || "/features"}>
               <div className="rounded-xl border bg-card/50 backdrop-blur-lg p-6 shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
-                  <Image
-                    src={feature.image || "/images/default-feature.jpg"}
+                  <img
+                    src={feature.image}
                     alt={feature.title}
-                    fill
-                    className="object-cover"
-                    priority={index < 6}
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <feature.icon className="h-10 w-10 text-primary mb-3" />
