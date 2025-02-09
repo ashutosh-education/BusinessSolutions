@@ -1,12 +1,21 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { User, Award, Target, Eye, Trophy, Users, Building2, Mail, Phone, Linkedin, Twitter } from 'lucide-react';
+import { User, Award, Target, Eye, Trophy, Users, Building2, Mail, Phone, Linkedin, Twitter, Moon, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 const ProfilePage = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const { theme } = useTheme();
   const [isLoading, setIsLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  // Wait for component to mount to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDarkMode = mounted && theme === 'dark';
 
   // Add these color definitions at the top level of the component
   const bgColor = isDarkMode ? 'bg-[#120826]' : 'bg-gray-50';
@@ -19,11 +28,6 @@ const ProfilePage = () => {
   const tagBorder = isDarkMode ? 'border-purple-500/30' : 'border-purple-200';
   const tagHover = isDarkMode ? 'hover:bg-purple-800/50' : 'hover:bg-purple-200';
   const iconColor = isDarkMode ? 'text-purple-300' : 'text-purple-500';
-
-  // Replace or update your existing toggle button click handler
-  const handleThemeToggle = () => {
-    setIsDarkMode(prev => !prev);
-  };
 
   useEffect(() => {
     // Simulating content loading
@@ -229,13 +233,13 @@ const ProfilePage = () => {
                 {
                   icon: <Trophy size={40} />,
                   title: "Industry Recognition",
-                  value: "25+",
+                  value: "10+",
                   description: "Awards & Honors"
                 },
                 {
                   icon: <Users size={40} />,
-                  title: "Global Reach",
-                  value: "10K+",
+                  title: "Students Reach",
+                  value: "100+",
                   description: "Students Impacted"
                 },
                 {
@@ -275,16 +279,16 @@ const ProfilePage = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {[
                   {
-                    name: "John Doe",
-                    role: "CEO, Tech Solutions",
-                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-                    text: "Outstanding vision and execution in transforming our educational infrastructure."
+                    name: "Vishal Singh",
+                    role: "Director- Brother's Academy",
+                    image: "https://html-stuffs.vercel.app/images/vishal.png",
+                    text: "This is a great platform for students to learn and grow. The UI is very user-friendly and the support team is very helpful."
                   },
                   {
-                    name: "Jane Smith",
-                    role: "Director, Education Institute",
-                    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-                    text: "Brought innovative solutions that revolutionized our learning approach."
+                    name: "Raunit Singh",
+                    role: "Co-founder-  Education Solutions Colleges",
+                    image: "https://html-stuffs.vercel.app/images/raunit.jpg",
+                    text: "BusinessSolutions has helped most of the enterpreneurs to grow their business and make their life of work easier."
                   }
                 ].map((testimonial, index) => (
                   <motion.div
@@ -319,6 +323,7 @@ const ProfilePage = () => {
                 Let's Connect
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
+                {/* Contact Info - Left side remains the same */}
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <Mail className={iconColor} size={24} />
@@ -345,23 +350,168 @@ const ProfilePage = () => {
                     </motion.a>
                   </div>
                 </div>
-                <form className="space-y-4">
+
+                {/* Enhanced Contact Form */}
+                <form 
+                  className="space-y-4"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    const form = e.currentTarget;
+                    const formData = new FormData(form);
+
+                    // Disable form while submitting
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    if (submitBtn) {
+                      submitBtn.setAttribute('disabled', 'true');
+                      submitBtn.innerHTML = 'Sending...';
+                    }
+
+                    try {
+                      const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                          'Accept': 'application/json'
+                        }
+                      });
+                      
+                      const data = await response.json();
+                      
+                      if (response.ok) {
+                        // Create notification container if it doesn't exist
+                        let notificationContainer = document.getElementById('notification-container');
+                        if (!notificationContainer) {
+                          notificationContainer = document.createElement('div');
+                          notificationContainer.id = 'notification-container';
+                          notificationContainer.className = 'fixed top-4 right-4 z-50';
+                          document.body.appendChild(notificationContainer);
+                        }
+
+                        // Create notification
+                        const notification = document.createElement('div');
+                        notification.className = `
+                          flex items-center gap-2 mb-2 px-6 py-4 
+                          bg-gradient-to-r from-purple-600 to-indigo-600 
+                          text-white rounded-lg shadow-lg transform translate-x-full
+                        `;
+                        notification.innerHTML = `
+                          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                          </svg>
+                          <span>Message sent successfully!</span>
+                        `;
+
+                        notificationContainer.appendChild(notification);
+
+                        // Animate notification
+                        notification.animate([
+                          { transform: 'translateX(100%)', opacity: 0 },
+                          { transform: 'translateX(0)', opacity: 1 }
+                        ], {
+                          duration: 500,
+                          easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                          fill: 'forwards'
+                        });
+
+                        // Clear form
+                        form.reset();
+
+                        // Remove notification after delay
+                        setTimeout(() => {
+                          notification.animate([
+                            { transform: 'translateX(0)', opacity: 1 },
+                            { transform: 'translateX(100%)', opacity: 0 }
+                          ], {
+                            duration: 500,
+                            easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                          }).onfinish = () => notification.remove();
+                        }, 3000);
+
+                      } else {
+                        throw new Error(data.message || 'Something went wrong!');
+                      }
+                    } catch (error) {
+                      console.error('Error:', error);
+                      // Show error notification
+                      const errorDiv = document.createElement('div');
+                      errorDiv.className = `
+                        fixed top-4 right-4 bg-red-500 text-white px-6 py-4 rounded-lg 
+                        shadow-lg flex items-center gap-2 transform translate-x-full
+                      `;
+                      errorDiv.innerHTML = `
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                        <span>Failed to send message. Please try again.</span>
+                      `;
+                      document.body.appendChild(errorDiv);
+
+                      errorDiv.animate([
+                        { transform: 'translateX(100%)', opacity: 0 },
+                        { transform: 'translateX(0)', opacity: 1 }
+                      ], {
+                        duration: 500,
+                        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                        fill: 'forwards'
+                      });
+
+                      setTimeout(() => {
+                        errorDiv.animate([
+                          { transform: 'translateX(0)', opacity: 1 },
+                          { transform: 'translateX(100%)', opacity: 0 }
+                        ], {
+                          duration: 500,
+                          easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+                        }).onfinish = () => errorDiv.remove();
+                      }, 3000);
+                    } finally {
+                      // Re-enable submit button
+                      if (submitBtn) {
+                        submitBtn.removeAttribute('disabled');
+                        submitBtn.innerHTML = 'Send Message';
+                      }
+                    }
+                  }}
+                >
+                  <input 
+                    type="hidden" 
+                    name="access_key" 
+                    value="f96e4598-d9c3-496f-b638-7aab30407525"
+                  />
                   <input
                     type="email"
+                    name="email"
                     placeholder="Your Email"
-                    className={`w-full p-3 rounded-lg ${cardBg} border border-purple-500/20 
-                    focus:border-purple-500/40 outline-none ${textColor}`}
+                    required
+                    className={`
+                      w-full p-3 rounded-lg ${cardBg} border border-purple-500/20 
+                      focus:border-purple-500/40 outline-none ${textColor}
+                      transition-all duration-300 hover:border-purple-500/30
+                    `}
                   />
                   <textarea
+                    name="message"
                     placeholder="Your Message"
+                    required
                     rows={4}
-                    className={`w-full p-3 rounded-lg ${cardBg} border border-purple-500/20 
-                    focus:border-purple-500/40 outline-none ${textColor}`}
+                    className={`
+                      w-full p-3 rounded-lg ${cardBg} border border-purple-500/20 
+                      focus:border-purple-500/40 outline-none ${textColor}
+                      transition-all duration-300 hover:border-purple-500/30
+                      resize-none
+                    `}
                   />
                   <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    className="w-full py-3 bg-purple-600 text-white rounded-lg 
-                    hover:bg-purple-700 transition-colors"
+                    type="submit"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`
+                      w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 
+                      text-white rounded-lg font-medium
+                      transition-all duration-300
+                      disabled:opacity-50 disabled:cursor-not-allowed
+                      flex items-center justify-center gap-2
+                    `}
                   >
                     Send Message
                   </motion.button>
@@ -373,7 +523,7 @@ const ProfilePage = () => {
       </div>
 
       {/* Add custom styles for animations */}
-      <style jsx>{`
+            <style jsx>{`
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
@@ -390,10 +540,18 @@ const ProfilePage = () => {
           from { transform: translateY(20px); opacity: 0; }
           to { transform: translateY(0); opacity: 1; }
         }
-        .animate-fadeIn { animation: fadeIn 1s ease-out; }
-        .animate-slideInDown { animation: slideInDown 1s ease-out; }
-        .animate-slideInRight { animation: slideInRight 1s ease-out; }
-        .animate-slideInUp { animation: slideInUp 1s ease-out; }
+        .animate-fadeIn { 
+          animation: fadeIn 0.6s ease-out forwards; 
+        }
+        .animate-slideInDown {
+          animation: slideInDown 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        .animate-slideInRight {
+          animation: slideInRight 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        .animate-slideInUp {
+          animation: slideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
       `}</style>
     </motion.div>
   );
