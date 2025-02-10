@@ -12,7 +12,7 @@ export default function Navbar() {
   // Update with your business links
   const navItems = [
     { href: "/features", label: "Services" },
-    { href: "/community", label: "Solutions" },
+    { href: "/solutions", label: "Solutions" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
     { href: "/careers", label: "Careers" }, // Optional section for hiring
