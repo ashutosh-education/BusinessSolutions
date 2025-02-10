@@ -107,36 +107,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="md:col-span-5 grid grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Solutions</h3>
-              <ul className="space-y-3">
-                {["Digital Marketing", "Web Development", "Cloud Services", "AI Solutions", "Data Analytics"].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-muted-foreground hover:text-foreground flex items-center gap-2 group">
-                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      <span>{item}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg mb-4">Company</h3>
-              <ul className="space-y-3">
-                {["About Us", "Careers", "Case Studies", "Blog", "Contact"].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-muted-foreground hover:text-foreground flex items-center gap-2 group">
-                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      <span>{item}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
           {/* Contact Information */}
           <div className="md:col-span-3">
             <h3 className="font-semibold text-lg mb-4">Get in Touch</h3>
