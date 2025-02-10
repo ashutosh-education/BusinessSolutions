@@ -2663,6 +2663,11 @@ video {
     padding-bottom: 0.75rem;
   }
 
+  .sm\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .sm\:pt-16 {
     padding-top: 4rem;
   }
