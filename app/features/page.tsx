@@ -56,7 +56,7 @@ const features: Feature[] = [
   {
     title: "Resume Building & Career Guidance",
     description: "Create impactful resumes and receive career coaching to navigate the job market confidently.",
-    link: "https://forms.google.com/your-form-link",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSdVxAA0WCLerfT37S-HhVBx9ZisxmFX7HpFZtKazEM1JHFV4Q/viewform",
     image: "https://img.freepik.com/free-vector/choice-worker-concept_23-2148631103.jpg",
   },
   {
@@ -101,7 +101,7 @@ export default function FeaturesPage() {
       "Comprehensive Internship Programs": {
         description: "Our internship programs provide hands-on experience across multiple domains with expert mentorship.",
         subServices: [
-          "IT Internships: Full-stack development, cloud computing, and data science tracks  (COMING SOON)",
+          "IT Internships: Full-stack development, cloud computing, and data science tracks  (COMING SOON).",
           "Business Development: Sales strategies, client relationship management",
           "HR Training: Recruitment processes, organizational development",
           "Soft Skills Development: Communication, leadership, and team management"
