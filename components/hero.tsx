@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CodeBlock } from "@/components/code-block";
 import { Sparkles } from "lucide-react";
 
 export default function Hero() {
