@@ -1,11 +1,78 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { MapPin } from "lucide-react";
-import Image from "next/image";
-import heroimage from './about.png';
+
+interface Job {
+  position: string;
+  location: string;
+  description: string;
+  requirements: string[];
+  responsibilities: string[];
+}
 
 const CareerPage = () => {
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (job: Job) => {
+    setSelectedJob(job);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedJob(null);
+  };
+
+  const jobs = [
+    {
+      position: "Software Engineer",
+      location: "Remote",
+      description: "Join our engineering team and help us build cutting-edge software solutions.",
+      requirements: [
+        "Bachelor's degree in Computer Science or related field",
+        "2+ years of experience in software development",
+        "Strong problem-solving skills",
+      ],
+      responsibilities: [
+        "Develop and maintain scalable software applications.",
+        "Collaborate with cross-functional teams to define and design new features.",
+        "Write clean, maintainable, and efficient code.",
+      ],
+    },
+    {
+      position: "Product Manager",
+      location: "San Francisco, CA",
+      description: "Lead product development and strategy, ensuring our product meets customer needs.",
+      requirements: [
+        "Experience managing product lifecycles",
+        "Strong leadership and communication skills",
+        "Ability to work cross-functionally",
+      ],
+      responsibilities: [
+        "Define product vision, strategy, and roadmap.",
+        "Work closely with engineering, design, and marketing teams.",
+        "Conduct market research and gather customer feedback.",
+      ],
+    },
+    {
+      position: "UX/UI Designer",
+      location: "New York, NY",
+      description: "Design intuitive and visually appealing user experiences for our digital products.",
+      requirements: [
+        "Proven experience in UX/UI design",
+        "Familiarity with design tools like Figma, Sketch, or Adobe XD",
+        "Strong portfolio showcasing design work",
+      ],
+      responsibilities: [
+        "Create wireframes, prototypes, and high-fidelity designs.",
+        "Collaborate with developers to ensure design feasibility.",
+        "Conduct user research and usability testing.",
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       {/* Hero Section */}
@@ -36,8 +103,8 @@ const CareerPage = () => {
           </div>
           {/* Hero Image */}
           <div>
-            <Image
-              src={heroimage}
+            <img
+              src="https://html-stuffs.vercel.app/images/10599122-removebg-preview.png"
               alt="Community Illustration"
               className="max-w-full h-auto"
               width={500}
@@ -93,38 +160,7 @@ const CareerPage = () => {
             We&lsquo;re always on the lookout for talented individuals. Here are our current openings. Apply today!
           </p>
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {[
-              {
-                position: "Software Engineer",
-                location: "Remote",
-                description: "Join our engineering team and help us build cutting-edge software solutions.",
-                requirements: [
-                  "Bachelor's degree in Computer Science or related field",
-                  "2+ years of experience in software development",
-                  "Strong problem-solving skills",
-                ],
-              },
-              {
-                position: "Product Manager",
-                location: "San Francisco, CA",
-                description: "Lead product development and strategy, ensuring our product meets customer needs.",
-                requirements: [
-                  "Experience managing product lifecycles",
-                  "Strong leadership and communication skills",
-                  "Ability to work cross-functionally",
-                ],
-              },
-              {
-                position: "UX/UI Designer",
-                location: "New York, NY",
-                description: "Design intuitive and visually appealing user experiences for our digital products.",
-                requirements: [
-                  "Proven experience in UX/UI design",
-                  "Familiarity with design tools like Figma, Sketch, or Adobe XD",
-                  "Strong portfolio showcasing design work",
-                ],
-              },
-            ].map((job, idx) => (
+            {jobs.map((job, idx) => (
               <div
                 key={idx}
                 className="p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-white/10 hover:scale-[1.02] transition-all duration-300"
@@ -134,14 +170,17 @@ const CareerPage = () => {
                 <p className="text-sm text-muted-foreground mt-2 flex items-center space-x-2">
                   <MapPin size={16} /> <span>{job.location}</span>
                 </p>
-                <ul className="mt-4 list-disc text-left space-y-2 text-sm text-muted-foreground">
-                  {job.requirements.map((req, i) => (
-                    <li key={i}>{req}</li>
-                  ))}
-                </ul>
-                <div className="mt-6 flex justify-center">
+                <div className="mt-6 flex justify-center space-x-4">
+                  <button
+                    onClick={() => openModal(job)}
+                    className="px-6 py-3 text-lg font-semibold text-purple-500 bg-transparent border border-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+                  >
+                    Learn More
+                  </button>
                   <a
-                    href="#apply"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSf..."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:opacity-90 transition-all duration-300"
                   >
                     Apply Now
@@ -152,6 +191,59 @@ const CareerPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Job Details Modal */}
+      {isModalOpen && selectedJob && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-background rounded-xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <h3 className="text-2xl font-semibold mb-4">{selectedJob.position}</h3>
+            <p className="text-sm text-muted-foreground flex items-center gap-2 mb-4">
+              <MapPin size={16} /> <span>{selectedJob.location}</span>
+            </p>
+            <p className="text-sm text-muted-foreground mb-6">{selectedJob.description}</p>
+            <div className="mt-6">
+              <h4 className="text-xl font-semibold">Requirements</h4>
+              <ul className="list-disc pl-6 mt-2 space-y-2 text-sm text-muted-foreground">
+                {selectedJob.requirements.map((req: string, i: number) => (
+                  <li key={i}>{req}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-6">
+              <h4 className="text-xl font-semibold">Requirements</h4>
+              <ul className="list-disc pl-6 mt-2 space-y-2 text-sm text-muted-foreground">
+                {selectedJob.responsibilities.map((resp: string, i: number) => (
+                  <li key={i}>{resp}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-6">
+              <h4 className="text-xl font-semibold">Responsibilities</h4>
+              <ul className="list-disc pl-6 mt-2 space-y-2 text-sm text-muted-foreground">
+                {selectedJob.responsibilities.map((resp, i) => (
+                  <li key={i}>{resp}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-6 flex justify-end space-x-4">
+              <button
+                onClick={closeModal}
+                className="px-6 py-3 text-lg font-semibold text-purple-500 bg-transparent border border-purple-500 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+              >
+                Close
+              </button>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf..."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:opacity-90 transition-all duration-300"
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-background/50 border-t border-white/10">
@@ -208,7 +300,9 @@ const CareerPage = () => {
           </p>
           <div className="mt-12 flex justify-center">
             <a
-              href="mailto:careers@company.com"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf..."
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg hover:opacity-90 transition-all duration-300"
             >
               Apply Now
