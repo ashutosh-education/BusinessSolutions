@@ -97,16 +97,20 @@ const ProfilePage = () => {
               className="relative group"
             >
               <div className="w-48 h-48 rounded-full bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 p-1">
-                <div className={`w-full h-full rounded-full ${isDarkMode ? 'bg-[#1a0f2e]' : 'bg-white'} flex items-center justify-center overflow-hidden`}>
-                  <User size={100} className={isDarkMode ? 'text-purple-300' : 'text-purple-500'} />
-                </div>
+              <div className={`w-full h-full rounded-full ${isDarkMode ? 'bg-[#1a0f2e]' : 'bg-white'} flex items-center justify-center overflow-hidden`}>
+                <img 
+                src="https://html-stuffs.vercel.app/images/asutosh%20profile%201.jpg"
+                alt="Ashutosh Kumar Singh"
+                className="w-full h-full object-cover rounded-full"
+                />
+              </div>
               </div>
               <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-2 -right-2 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+              className="absolute -bottom-2 -right-2 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center"
               >
-                <Award className="text-white" size={24} />
+              <Award className="text-white" size={24} />
               </motion.div>
             </motion.div>
 
