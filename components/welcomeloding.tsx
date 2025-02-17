@@ -90,7 +90,7 @@ const WelcomeLoading = () => {
             variants={itemVariants}
             className="mt-8 text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500"
           >
-            BusninessSolutions
+            BusinessSolutions
           </motion.h1>
 
           {/* Loading Progress */}
