@@ -56,7 +56,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-base sm:text-lg font-semibold">Address</p>
                     <p className="text-sm sm:text-base text-muted-foreground">
-                     Chennai, Tamil Nadu, India
+                     Salem, Tamil Nadu, India
                     </p>
                   </div>
                 </div>
