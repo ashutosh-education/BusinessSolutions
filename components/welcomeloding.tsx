@@ -1,9 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WelcomeLoading = () => {
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    // Set dimensions after component mounts
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+
+    // Optional: Update dimensions on window resize
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -76,8 +97,8 @@ const WelcomeLoading = () => {
               animate={{
                 opacity: Math.random() * 0.5 + 0.3,
                 scale: Math.random() * 0.5 + 0.5,
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
+                x: Math.random() * (dimensions.width || 1000), // Fallback value
+                y: Math.random() * (dimensions.height || 800), // Fallback value
               }}
               transition={{
                 duration: Math.random() * 2 + 2,
