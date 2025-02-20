@@ -340,11 +340,11 @@ const ProfilePage = () => {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <Mail className={iconColor} size={24} />
-                    <p className={descriptionText}>contact@businesssolutions.com</p>
+                    <p className={descriptionText}>businesssolutionsteam247@gmail.com</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone className={iconColor} size={24} />
-                    <p className={descriptionText}>+1 (555) 123-4567</p>
+                    <p className={descriptionText}>+91 8292952357</p>
                   </div>
                   <div className="flex gap-4">
                     <motion.a
