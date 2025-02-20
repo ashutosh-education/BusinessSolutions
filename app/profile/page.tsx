@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { User, Award, Target, Eye, Trophy, Users, Building2, Mail, Phone, Linkedin, Twitter, Moon, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
+import profileimage from '../asutoshimage.png';
 
 const ProfilePage = () => {
   const { theme } = useTheme();
@@ -182,11 +184,18 @@ const ProfilePage = () => {
               >
                 <div className={`absolute inset-0 bg-gradient-to-tr from-purple-600 
                   to-indigo-600 rounded-2xl transform rotate-3 opacity-20`} />
-                <div className={`w-full h-full rounded-2xl ${cardBg} p-8 
+                <div className={`w-full h-full rounded-2xl ${cardBg} p-2 
                   flex items-center justify-center relative overflow-hidden 
                   group-hover:shadow-lg transition-all duration-500`}>
-                  <User size={150} className={`${iconColor} transform 
-                    group-hover:scale-110 transition-transform duration-500`} />
+                  <Image
+                  src={profileimage}
+                  alt="About Me"
+                  className="w-full h-full object-contain rounded-2xl transform 
+                    group-hover:scale-110 transition-transform duration-500"
+                  width={400}
+                  height={450}
+                  priority
+                  />
                 </div>
               </motion.div>
             </motion.div>
