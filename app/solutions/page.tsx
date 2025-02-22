@@ -7,6 +7,8 @@ import {
   Lightbulb, Building, Handshake, Cloud, BarChart, Trophy,
   Check, Heart, Target, Zap
 } from "lucide-react";
+import Image from "next/image";
+import Herobg from "./herobg.jpg";
 
 type SolutionItem = {
   name: string;
@@ -80,8 +82,9 @@ const SolutionsPage = () => {
       {/* Hero Section - Updated for better mobile responsiveness */}
       <section className="relative min-h-[90vh] py-20 flex items-center justify-center px-4 overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="https://html-stuffs.vercel.app/images/banner.jpg" 
+          <Image
+            layout="fill"
+            src={Herobg}
             alt="Hero Background"
             className="object-cover w-full h-full"
           />

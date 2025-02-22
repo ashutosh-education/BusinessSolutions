@@ -11,10 +11,10 @@ export default function Footer() {
   ];
 
   const contactInfo = {
-    address: "123 Business Avenue, Silicon Valley, CA 94025",
-    email: "contact@businesssolutions.com",
-    phone: "+1 (555) 123-4567",
-    hours: "Mon - Fri: 9:00 AM - 6:00 PM",
+    address: "Salem, Tamil Nadu, India",
+    email: "businesssolutionsteam247@gmail.com",
+    phone: "+91 8292952357",
+    hours: "Mon - Sat: 9:00 AM - 6:00 PM",
   };
 
   const socialLinks = [
