@@ -3,8 +3,8 @@ import ContactForm from '@/components/contact-form';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - BusinessSolutions',
-  description: 'Reach out to BusinessSolutions for expert guidance, support, or inquiries.',
+  title: 'Contact Us - RaushByte',
+  description: 'Reach out to RaushByte for expert guidance, support, or inquiries.',
 };
 
 export default function ContactPage() {
@@ -46,7 +46,7 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 shrink-0" />
                   <div>
                     <p className="text-base sm:text-lg font-semibold">Phone</p>
-                    <p className="text-sm sm:text-base text-muted-foreground">+91 8292952357</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">+91 8292952357, 9123191217</p>
                   </div>
                 </div>
 
