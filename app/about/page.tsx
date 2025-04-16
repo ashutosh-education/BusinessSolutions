@@ -26,7 +26,7 @@ const AboutPage = () => {
             {/* Left Side Content */}
             <div className="text-center lg:text-left space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
-                RaushByte: Empowering Success Across Domains
+                RaushByte: Trusted Partner for Growth, Learning, & Digital Transformation
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground">
                 We provide expert guidance, training, and services in IT, Sales, HR, Consulting, and more. Unlock your potential with tailored solutions for growth.
