@@ -29,7 +29,8 @@ const AboutPage = () => {
                 RaushByte: Trusted Partner for Growth, Learning, & Digital Transformation
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground">
-                We provide expert guidance, training, and services in IT, Sales, HR, Consulting, and more. Unlock your potential with tailored solutions for growth.
+                Webelieve in bridging the gap between education and industry. Founded with a mission to empower the next generation of learners and creators, we offer a unique blend of services that combine technology, mentorship, and real-world experience.
+
               </p>
               <div className="mt-8">
                 <a
