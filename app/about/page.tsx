@@ -75,8 +75,8 @@ const AboutPage = () => {
                 },
                 {
                   icon: <Briefcase size={32} />,
-                  title: "Consulting Services",
-                  description: "Expert guidance for businesses in strategy, HR, and technology."
+                  title: "Education Consulting Services",
+                  description: "We offer expert guidance for admissions, career paths, and college selection across top institutions in India."
                 },
                 {
                   icon: <MessageCircle size={32} />,
@@ -96,7 +96,7 @@ const AboutPage = () => {
                 {
                   icon: <Globe size={32} />,
                   title: "Business Development Support",
-                  description: "Help in sales strategies, marketing, and networking."
+                  description: "We support all types of companies with business development and result-driven social media marketing services."
                 },
                 {
                   icon: <Clock size={32} />,
@@ -165,7 +165,7 @@ const AboutPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  quote: "BusinessSolutions transformed our team with their leadership training.",
+                  quote: "RaushByte transformed our team with their leadership training.",
                   author: "John Doe, CEO of TechCo"
                 },
                 {
