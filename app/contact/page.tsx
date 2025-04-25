@@ -37,7 +37,7 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 shrink-0" />
                   <div>
                     <p className="text-base sm:text-lg font-semibold">Email</p>
-                    <p className="text-sm sm:text-base text-muted-foreground">businesssolutionsteam247@gmail.com</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">raushbyte@gmail.com</p>
                   </div>
                 </div>
 
@@ -56,7 +56,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-base sm:text-lg font-semibold">Address</p>
                     <p className="text-sm sm:text-base text-muted-foreground">
-                     Salem, Tamil Nadu, India
+                     Excel Engineering Collge, Incubation Center A1 Block
                     </p>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-base sm:text-lg font-semibold">Operating Hours</p>
                     <p className="text-sm sm:text-base text-muted-foreground">
-                      Mon - Sat: 9:00 AM - 6:00 PM<br />
+                      Mon - Sat: 9:30 AM - 5:30 PM<br />
                       Sun: Closed
                     </p>
                   </div>
