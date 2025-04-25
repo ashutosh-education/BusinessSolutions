@@ -44,13 +44,13 @@ const features: Feature[] = [
   {
     title: "Business Development Support",
     description: "Help businesses improve their sales, marketing strategies, and professional networks to drive growth.",
-    link: "https://forms.google.com/your-form-link",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSd5Qx-vggcYo9ZH06OCxPC_C4r42mXayQU_6AVW7wSUbanA3w/viewform?usp=header",
     image: "https://img.freepik.com/free-photo/two-business-men-celebrating-deal_158595-5256.jpg",
   },
   {
     title: "Entrepreneurship Guidance",
     description: "Support for startups with business planning, market analysis, funding strategies, and growth tactics.",
-    link: "https://forms.google.com/your-form-link",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSd5Qx-vggcYo9ZH06OCxPC_C4r42mXayQU_6AVW7wSUbanA3w/viewform?usp=header",
     image: "https://img.freepik.com/free-photo/male-graphic-designer-holding-spiral-notepad-with-text_1170-1104.jpg",
   },
   {
@@ -62,7 +62,7 @@ const features: Feature[] = [
   {
     title: "Project-Based Learning",
     description: "Work on real-world projects to enhance your skills and apply theoretical knowledge in practical situations.",
-    link: "https://forms.google.com/your-form-link",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSd5Qx-vggcYo9ZH06OCxPC_C4r42mXayQU_6AVW7wSUbanA3w/viewform?usp=header",
     image: "https://img.freepik.com/free-photo/3d-cartoon-scene-depicting-variety-people-multitasking_23-2151294452.jpg",
   },
   {
@@ -74,7 +74,7 @@ const features: Feature[] = [
   {
     title: "Mentorship & Networking",
     description: "Connect with industry experts, gain advice, and build valuable professional relationships through mentoring and networking programs.",
-    link: "https://forms.google.com/your-form-link",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSd5Qx-vggcYo9ZH06OCxPC_C4r42mXayQU_6AVW7wSUbanA3w/viewform?usp=header",
     image: "https://img.freepik.com/free-vector/social-media-network-with-avatars_24908-56301.jpg",
   },
   {
