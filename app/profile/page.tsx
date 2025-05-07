@@ -301,7 +301,7 @@ const ProfilePage = () => {
                     name: "Raunit Singh",
                     role: "Co-founder-  Education Solutions Colleges",
                     image: "https://html-stuffs.vercel.app/images/raunit.jpg",
-                    text: "BusinessSolutions has helped most of the enterpreneurs to grow their business and make their life of work easier."
+                    text: "RausBytes has helped most of the enterpreneurs to grow their business and make their life of work easier."
                   }
                 ].map((testimonial, index) => (
                   <motion.div
@@ -340,7 +340,7 @@ const ProfilePage = () => {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <Mail className={iconColor} size={24} />
-                    <p className={descriptionText}>businesssolutionsteam247@gmail.com</p>
+                    <p className={descriptionText}>RausBytesteam247@gmail.com</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone className={iconColor} size={24} />

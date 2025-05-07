@@ -159,7 +159,7 @@ const WelcomeLoading = () => {
               <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 mb-6"
               >
-                BusinessSolutions
+                RausBytes
               </motion.h1>
 
               {/* Enhanced Progress Bar */}

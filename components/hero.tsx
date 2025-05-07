@@ -23,11 +23,11 @@ export default function Hero() {
           Empowering Careers, Enhancing Businesses
         </span>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-          <span className="text-primary">BusinessSolutions</span> to Success
+          <span className="text-primary">RausBytes</span> to Success
           <br /> in  <span className="text-primary">Multiple Domains</span>
         </h1>
         <p className="text-xl text-muted-foreground max-w-[800px] mx-auto">
-          BusinessSolution provides expert guidance and training in IT, Sales, 
+          RausByte provides expert guidance and training in IT, Sales, 
           , Consulting, HR, Soft Skills, and more. Unlock 
           opportunities with internships and services tailored to your growth.
         </p>

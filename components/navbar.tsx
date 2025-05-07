@@ -61,7 +61,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center space-x-2">
           <img 
             src="https://html-stuffs.vercel.app/images/android-chrome-512x512.png" 
-            alt="BusinessSolutions Logo" 
+            alt="RausBytes Logo" 
             className="h-8 w-auto transform transition-transform hover:scale-110"
           />
           <span className="font-bold text-foreground text-lg tracking-wide transform transition-transform hover:scale-110">RausByte</span>

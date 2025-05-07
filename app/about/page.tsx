@@ -47,7 +47,7 @@ const AboutPage = () => {
               <div className="relative w-full h-full">
                 <img
                   src="https://html-stuffs.vercel.app/images/3d_image_of_a_business_profile_name.jpeg"
-                  alt="BusinessSolutions Illustration"
+                  alt="RausBytes Illustration"
                   className="max-w-full h-auto"
                   width={500}
                   height={500}

@@ -19,7 +19,7 @@ const testimonials = [
     designation: "Director- Susheela Educare",
     avatar: "https://html-stuffs.vercel.app/images/shankar.jpg",
     review:
-      "BusinessSolutions has helped us streamline our business processes, and we are now able to focus on our core business.",
+      "RausBytes has helped us streamline our business processes, and we are now able to focus on our core business.",
     rating: 4,
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     designation: "Co-founder-  Education Solutions Colleges",
     avatar: "https://html-stuffs.vercel.app/images/raunit.jpg",
     review:
-      "BusinessSolutions has helped most of the enterpreneurs to grow their business and make their life of work easier.",
+      "RausBytes has helped most of the enterpreneurs to grow their business and make their life of work easier.",
     rating: 5,
   },
 ];

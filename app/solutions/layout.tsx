@@ -2,7 +2,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Solutions - BusinessSolutions',
+  title: 'Solutions - RausBytes',
   description: 'Unlock opportunities with expert guidance and tailored solutions in IT, Sales, HR, Consulting, and more.',
 };
 

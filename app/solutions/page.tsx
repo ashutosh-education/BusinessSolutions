@@ -182,7 +182,7 @@ const SolutionsPage = () => {
           <section className="pt-8 sm:pt-16 border-t border-white/10">
             <div className="text-center mb-8 sm:mb-12 px-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400">
-                Why Choose BusinessSolution?
+                Why Choose RausByte?
               </h2>
               <p className="text-sm sm:text-base text-muted-foreground mt-3 sm:mt-4 max-w-2xl mx-auto">
                 Join thousands of successful professionals who transformed their careers with our comprehensive solutions

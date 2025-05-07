@@ -206,7 +206,7 @@ export default function FeaturesPage() {
                 Explore Services
               </button>
               <a
-                href="https://businesssolutions.vercel.app/"
+                href="https://RausBytes.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent border-2 border-blue-600 text-blue-600 dark:text-white 

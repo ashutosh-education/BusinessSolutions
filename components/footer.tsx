@@ -12,7 +12,7 @@ export default function Footer() {
 
   const contactInfo = {
     address: "Salem, Tamil Nadu, India",
-    email: "businesssolutionsteam247@gmail.com",
+    email: "RausBytesteam247@gmail.com",
     phone: "+91 8292952357",
     hours: "Mon - Sat: 9:00 AM - 6:00 PM",
   };
@@ -79,7 +79,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-4 md:mb-6">
               <img
                 src="https://html-stuffs.vercel.app/images/android-chrome-512x512.png"
-                alt="BusinessSolutions Logo"
+                alt="RausBytes Logo"
                 width={150}
                 height={35}
                 className="h-auto w-auto"
@@ -138,7 +138,7 @@ export default function Footer() {
         <div className="pt-6 md:pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm text-muted-foreground">
             <div className="text-center md:text-left">
-              <p>&copy; {new Date().getFullYear()} BusinessSolutions. All rights reserved.</p>
+              <p>&copy; {new Date().getFullYear()} RausBytes. All rights reserved.</p>
             </div>
             <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
               <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
