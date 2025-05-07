@@ -64,7 +64,7 @@ export default function Navbar() {
             alt="BusinessSolutions Logo" 
             className="h-8 w-auto transform transition-transform hover:scale-110"
           />
-          <span className="font-bold text-foreground text-lg tracking-wide transform transition-transform hover:scale-110">BusinessSolutions</span>
+          <span className="font-bold text-foreground text-lg tracking-wide transform transition-transform hover:scale-110">RausByte</span>
         </Link>
         <div className="hidden md:flex items-center space-x-6 ml-6">
           {navItems.map((item) => (

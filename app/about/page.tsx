@@ -26,10 +26,11 @@ const AboutPage = () => {
             {/* Left Side Content */}
             <div className="text-center lg:text-left space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500">
-                BusinessSolutions: Empowering Success Across Domains
+                RaushByte: Trusted Partner for Growth, Learning, & Digital Transformation
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground">
-                We provide expert guidance, training, and services in IT, Sales, HR, Consulting, and more. Unlock your potential with tailored solutions for growth.
+                We believe in bridging the gap between education and industry. Founded with a mission to empower the next generation of learners and creators, we offer a unique blend of services that combine technology, mentorship, and real-world experience.
+
               </p>
               <div className="mt-8">
                 <a
@@ -74,8 +75,8 @@ const AboutPage = () => {
                 },
                 {
                   icon: <Briefcase size={32} />,
-                  title: "Consulting Services",
-                  description: "Expert guidance for businesses in strategy, HR, and technology."
+                  title: "Education Consulting Services",
+                  description: "We offer expert guidance for admissions, career paths, and college selection across top institutions in India."
                 },
                 {
                   icon: <MessageCircle size={32} />,
@@ -95,7 +96,7 @@ const AboutPage = () => {
                 {
                   icon: <Globe size={32} />,
                   title: "Business Development Support",
-                  description: "Help in sales strategies, marketing, and networking."
+                  description: "We support all types of companies with business development and result-driven social media marketing services."
                 },
                 {
                   icon: <Clock size={32} />,
@@ -164,7 +165,7 @@ const AboutPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  quote: "BusinessSolutions transformed our team with their leadership training.",
+                  quote: "RaushByte transformed our team with their leadership training.",
                   author: "John Doe, CEO of TechCo"
                 },
                 {

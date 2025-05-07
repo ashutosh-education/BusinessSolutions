@@ -126,7 +126,7 @@ const ProfilePage = () => {
               </h2>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-slideInUp">
                 <span className={`px-4 py-2 rounded-full ${tagBg} backdrop-blur-lg ${tagText} border ${tagBorder} ${tagHover} transition-all`}>
-                  Business Solutions
+                  RaushByte
                 </span>
                 <span className={`px-4 py-2 rounded-full ${tagBg} backdrop-blur-lg ${tagText} border ${tagBorder} ${tagHover} transition-all`}>
                   Education Solutions Colleges
